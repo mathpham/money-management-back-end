@@ -80,7 +80,7 @@ public class ExpenseInfoController {
 		gc.set(Calendar.DAY_OF_MONTH, 0);
 		Date monthStart = gc.getTime();
 		gc.add(Calendar.MONTH, 1);
-		gc.add(Calendar.DAY_OF_MONTH, -1);
+		gc.add(Calendar.DAY_OF_MONTH, 1);
 		Date monthEnd = gc.getTime();
 		// Ket thuc tim ngay cuoi thang, dau thang
 
@@ -266,11 +266,11 @@ public class ExpenseInfoController {
 		// Tim ngay cuoi thang va dau thang
 		Calendar gc = new GregorianCalendar();
 		gc.set(Calendar.YEAR, year);
-		gc.set(Calendar.MONTH, month - 1);
-		gc.set(Calendar.DAY_OF_MONTH, 1);
+		gc.set(Calendar.MONTH, month -1);
+		gc.set(Calendar.DAY_OF_MONTH, 0);
 		Date monthStart = gc.getTime();
 		gc.add(Calendar.MONTH, 1);
-		gc.add(Calendar.DAY_OF_MONTH, -1);
+		gc.add(Calendar.DAY_OF_MONTH, 1);
 		Date monthEnd = gc.getTime();
 		// Lay du lieu
 		List<ExpenseInfo> expenseInfos = new ArrayList<>();
